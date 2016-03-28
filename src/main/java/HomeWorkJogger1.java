@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class HomeWorkJogger1 {
-
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
@@ -18,10 +17,19 @@ public class HomeWorkJogger1 {
 
 		System.out.println("Hello, " + userName + ". Welcome!");
 
-		System.out.println(userName + ", please tell me how many days have you logged or jogged this week?");
+		System.out.println(userName + ", please tell me how many days have you jogged this week?");
 		daysJogged = scanner.nextInt();
 
-		System.out.println("Thanks! How many hours you have jogged or logged each day?");
+		while (daysJogged >= 8) {
+			System.out.println("You cannot enter more than 7 days per week. Please, enter proper number");
+			daysJogged++;
+			daysJogged = scanner.nextInt();
+
+			if (daysJogged < 8)
+				break;
+		}
+
+		System.out.println("Thanks! How many hours you have jogged each day?");
 
 		while (x <= daysJogged) {
 			System.out.println("Please, enter how many hours have you spent jogging in your " + x + " day");
@@ -44,5 +52,4 @@ public class HomeWorkJogger1 {
 		}
 
 	}
-
 }
