@@ -21,7 +21,7 @@ public class HomeWorkJogger1 {
 		daysJogged = scanner.nextInt();
 
 		while (daysJogged >= 8 || daysJogged == 0) {
-			System.out.println("You cannot enter more than 7 days per week. Please, enter proper number");
+			System.out.println("You cannot enter more than 7 days per week or 0 (zero). Please, enter proper number");
 			daysJogged++;
 			daysJogged = scanner.nextInt();
 
